@@ -2,6 +2,7 @@
 import React from "react";
 import { ChevronUp } from "lucide-react";
 // import logo from "../assests/logo.svg";
+import { Link } from "react-router-dom";
 
 const FooterSection = () => {
   return (
@@ -39,31 +40,19 @@ const FooterSection = () => {
           <h3 className="text-xl font-semibold">Our Policies</h3>
           <ul className="text-sm space-y-2 text-[#ff9e1b]">
             <li>
-              {" "}
-              <a
-                href="/advance-payment-policy"
-                className="hover:underline cursor-pointer"
-              >
+              <Link to="/advance-payment-policy" className="hover:underline">
                 Advance Payment Policy
-              </a>
+              </Link>
             </li>
             <li>
-              {" "}
-              <a
-                href="/privacy-policy"
-                className="hover:underline cursor-pointer"
-              >
-                Privacy Policy{" "}
-              </a>
+              <Link to="/privacy-policy" className="hover:underline">
+                Privacy Policy
+              </Link>
             </li>
             <li>
-              {" "}
-              <a
-                href="/terms-and-condition"
-                className="hover:underline cursor-pointer"
-              >
+              <Link to="/terms-and-condition" className="hover:underline">
                 Terms & Conditions
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

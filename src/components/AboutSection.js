@@ -24,9 +24,10 @@ const AboutSection = () => {
 
         {/* Center Content */}
         <div className="text-center md:text-left flex flex-col gap-8">
-          <h2 className="text-5xl font-black text-[#7c3aed] border-b-4 border-[#7c3aed] w-fit pb-3">
+          <h2 className="text-5xl font-black text-black border-b-4 border-[#0c0c0c] w-fit pb-3">
             About Us
           </h2>
+
           <p className="text-lg leading-relaxed text-white">
             Welcome to{" "}
             <span className="font-semibold text-[#ffbf47]">
