@@ -38,7 +38,7 @@ const FooterSection = () => {
         {/* Policies */}
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">Our Policies</h3>
-          <ul className="text-sm space-y-2 text-[#ff9e1b]">
+          <ul className="text-sm space-y-2 z-10 text-[#ff9e1b]">
             <li>
               <Link to="/advance-payment-policy" className="hover:underline">
                 Advance Payment Policy
@@ -59,18 +59,52 @@ const FooterSection = () => {
       </div>
 
       {/* Divider */}
-      <div className="mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
+      <div className="relative z-10 mt-12 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/80">
         <p>
           © 2024 All Right Reserved by{" "}
           <span className="font-semibold text-white">ABD TRADING LLC</span>
         </p>
-        <ul className="flex gap-6 mt-4 md:mt-0">
-          <li className="hover:text-white cursor-pointer">Home</li>
-          <li className="hover:text-white cursor-pointer">About us</li>
-          <li className="hover:text-white cursor-pointer">Our Services</li>
-          <li className="hover:text-white cursor-pointer">Contact</li>
-          <li className="hover:text-white cursor-pointer">
-            <ChevronUp className="h-5 w-5" />
+
+        <ul className="flex gap-6 mt-4 md:mt-0 text-sm font-medium">
+          <li>
+            <Link
+              to="/"
+              className="hover:text-[#ff9e1b] transition-colors duration-200"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className="hover:text-[#ff9e1b] transition-colors duration-200"
+            >
+              About us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/services-eCommerce"
+              className="hover:text-[#ff9e1b] transition-colors duration-200"
+            >
+              Our Services
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className="hover:text-[#ff9e1b] transition-colors duration-200"
+            >
+              Contact
+            </Link>
+          </li>
+          <li>
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="hover:text-[#ff9e1b] transition-colors duration-200"
+            >
+              <ChevronUp className="h-5 w-5" />
+            </button>
           </li>
         </ul>
       </div>
