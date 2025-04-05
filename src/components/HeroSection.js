@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Phone, ArrowDownRight } from "lucide-react";
 import LandingImage1 from "../assests/LandingImage1.png";
+import mobilebg from "../assests/Mobileimage.png";
 
 const HeroSection = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -15,8 +16,12 @@ const HeroSection = () => {
 
   return (
     <div
-      className="relative min-h-[90vh] md:h-[calc(100vh-96px)] bg-[#2d1545] text-white bg-no-repeat bg-cover bg-local md:bg-fixed bg-center overflow-hidden"
-      style={{ backgroundImage: `url(${LandingImage1})` }}
+      className="relative min-h-[100vh] bg-[#2d1545] text-white bg-no-repeat bg-cover bg-center overflow-hidden scrollbar-hide"
+      style={{
+        backgroundImage: `url(${
+          window.innerWidth < 768 ? mobilebg : LandingImage1
+        })`,
+      }}
     >
       <div className="absolute inset-0 bg-[#2d1545]/30 backdrop-blur-[1px] z-0"></div>
 
